@@ -86,7 +86,7 @@ class _BooksList extends StatelessWidget {
             break;
 
           case ConnectionState.done:
-            if (snapshot.hasData || snapshot.data != []) {
+            if (snapshot.hasData && snapshot.data!.isNotEmpty) {
               return SliverList.builder(
                 itemBuilder: (context, index) => InkWell(
                   onTap: () {
